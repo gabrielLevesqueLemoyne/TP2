@@ -5,7 +5,14 @@
         "../sass/style.scss",
         "../sass/site/_site.scss",
         "../sass/site/grille/_grille-atelier.scss",
-        "../sass/site/navigation/_menu.scss"
+        "../sass/site/navigation/_menu.scss",
+        "../sass/site/navigation/_navigation.scss",
+        "../sass/site/_entete.scss",
+        "../sass/site/_extend.scss",
+        "../sass/site/_footer.scss",
+        "../sass/site/_mixins.scss",
+        "../sass/site/_typography.scss",
+        "../sass/site/_variable.scss"
     ],
     "names": [],
     "file": "style.css"
