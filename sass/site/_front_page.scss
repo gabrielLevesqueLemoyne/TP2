@@ -1,0 +1,14 @@
+.evenement {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .evenement::after {
+    display: block;
+    clear: both;
+  }
+  
+  .evenement > img {
+    float: left;
+    margin: 10px;
+  }

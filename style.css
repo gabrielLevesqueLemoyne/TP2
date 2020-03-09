@@ -17,92 +17,8 @@
 /*--------------------------------------------------------------
 # Grille atelier
 --------------------------------------------------------------*/
-.red {
-  color: red;
-}
-
 .blue {
   color: blue;
-}
-
-.grid-atelier {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[11];
-      grid-template-rows: repeat(11, 1fr);
-  text-align: center;
-}
-
-[class="2"] {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 1;
-}
-
-[class="3"] {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 2;
-}
-
-[class="4"] {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 3;
-}
-
-[class="5"] {
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-  grid-column-end: 4;
-}
-
-[id="08"] {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 4;
-}
-
-[id="10"] {
-  -ms-grid-row: 4;
-      grid-row-start: 4;
-  grid-row-end: 6;
-}
-
-[id="13"] {
-  -ms-grid-row: 7;
-      grid-row-start: 7;
-  grid-row-end: 9;
-}
-
-[id="15"] {
-  -ms-grid-row: 9;
-      grid-row-start: 9;
-  grid-row-end: 11;
-}
-
-.lunch {
-  -ms-grid-row: 6;
-      grid-row-start: 6;
-  grid-row-end: 6;
-}
-
-#BL {
-  background-color: #006600;
-}
-
-#BE {
-  background-color: #009900;
-}
-
-#BD {
-  background-color: #00cc00;
-}
-
-#BM {
-  background-color: #00FF00;
 }
 
 /*--------------------------------------------------------------
@@ -132,5 +48,20 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.evenement {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.evenement::after {
+  display: block;
+  clear: both;
+}
+
+.evenement > img {
+  float: left;
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */
