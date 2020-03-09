@@ -44,7 +44,14 @@ get_header();
                 echo '<p class='. get_post_field('post_author')." id=".$horaire.'>' . get_the_title() . '<br>' .get_post_field('post_name'). '<br>' .get_the_author_meta('display_name', $post->post_author). '</p>';
             }
 
-
+            echo '<p class="2" id="BL">Luna</p>';
+            echo '<p class="3" id="BE">Eddy</p>';
+            echo '<p class="4" id="BD">Derick</p>';
+            echo '<p class="5" id="BM">Maybell</p>';
+            echo '<p class="2 lunch" id="BL">Lunch</p>';
+            echo '<p class="3 lunch" id="BE">Lunch</p>';
+            echo '<p class="4 lunch" id="BD">Lunch</p>';
+            echo '<p class="5 lunch" id="BM">Lunch</p>';
             echo '</div>';
             wp_reset_postdata();
 				/*
