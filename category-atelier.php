@@ -9,7 +9,10 @@
 //the query
 $args = array(
     "category_name" => "atelier",
-    "posts_per_page" => 10,     
+    "orderby" => "post_name",
+    "order" => "ASC",
+    'posts_per_page' => -1
+
 );
 
 $query = new WP_Query( $args );
@@ -36,7 +39,7 @@ get_header();
                 $query->the_post();
                 //echo $i++;
 
-                echo '<p>'. $i++ . '. ' . get_the_title() .'</p>';
+                echo '<p>'. $i++ . '. ' . get_the_title() . '____<span class="red">' .get_post_field('post_name'). '</span><span class="blue">____' .get_the_author_meta('display_name', $post->post_author). '</span></p>';
                 
             }
 
