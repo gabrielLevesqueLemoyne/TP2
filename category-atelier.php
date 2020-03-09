@@ -29,18 +29,23 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<?php
-            /* Start the Loop */
-            $i = 1;
-			while ( $query->have_posts() ) {
-                    
-                $query->the_post();
-                //echo $i++;
+            <?php
+            
+            ////START DIV GRID
+            echo '<div class="grid-atelier">';
 
-                echo '<p>'. $i++ . '. ' . get_the_title() . '____<span class="red">' .get_post_field('post_name'). '</span><span class="blue">____' .get_the_author_meta('display_name', $post->post_author). '</span></p>';
+            /* Start the Loop */
+
+			while ( $query->have_posts() ) {
                 
+                $query->the_post();
+                $horaire= substr(get_post_field('post_name'), -2);
+
+                echo '<p class='. get_post_field('post_author')." id=".$horaire.'>' . get_the_title() . '<br>' .get_post_field('post_name'). '<br>' .get_the_author_meta('display_name', $post->post_author). '</p>';
             }
 
+
+            echo '</div>';
             wp_reset_postdata();
 				/*
 				 * Include the Post-Type-specific template for the content.
