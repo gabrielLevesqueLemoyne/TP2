@@ -12,14 +12,12 @@ $args = array(
     "orderby" => "post_name",
     "order" => "ASC",
     'posts_per_page' => -1
-
 );
 
 $query = new WP_Query( $args );
 
 get_header();
 ?>
-///////////// category-Article //////////////////
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -27,7 +25,7 @@ get_header();
 
 			<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<h1 class="page-title">', '</h1>' );
 				?>
 			</header><!-- .page-header -->
 
@@ -51,7 +49,7 @@ get_header();
 				 */
 				//get_template_part( 'template-parts/content', get_post_type() )
 
-			the_posts_navigation();
+			//the_posts_navigation();
 
 		else :
 

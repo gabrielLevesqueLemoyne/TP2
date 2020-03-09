@@ -1,0 +1,20 @@
+#site-navigation button{
+    display: none;
+}
+
+#primary-menu{
+    display: flex;
+    flex-direction: row;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+}
