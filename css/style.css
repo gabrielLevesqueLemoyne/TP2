@@ -67,21 +67,21 @@
   display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 20;
 }
 
 .listeMenu {
   opacity: 0;
-  width: 90%;
+  width: 100%;
   height: auto;
   list-style-type: none;
   font-size: calc(2em + 1vw);
@@ -92,9 +92,9 @@
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .choixMenu {
@@ -108,7 +108,7 @@
   -webkit-transition-property: ease-in-out transform;
   transition-property: ease-in-out transform;
   -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #checkMenu:checked ~ #btnMenu {
@@ -116,7 +116,7 @@
   -webkit-transition-property: ease-in-out transform;
   transition-property: ease-in-out transform;
   -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #btnMenu {
@@ -125,7 +125,7 @@
   -webkit-transition-property: ease-in-out transform;
   transition-property: ease-in-out transform;
   -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #checkMenu:checked ~ ul {
@@ -133,7 +133,7 @@
   -webkit-transition-property: ease-in-out transform;
   transition-property: ease-in-out transform;
   -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #checkMenu:checked ~ ul > li {
@@ -154,14 +154,14 @@
     -webkit-transition-property: opacity;
     transition-property: opacity;
     -webkit-transition-duration: 1s;
-    transition-duration: 1s;
+            transition-duration: 1s;
   }
   .choixMenu:hover {
     color: palevioletred;
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 1s;
-    transition-duration: 1s;
+            transition-duration: 1s;
   }
 }
 
@@ -183,5 +183,36 @@ button {
 .evenement > img {
   float: left;
   margin: 10px;
+}
+
+.site {
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  background-color: red;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
