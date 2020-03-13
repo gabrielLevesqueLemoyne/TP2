@@ -14,19 +14,30 @@ function my_theme_enqueue_styles() {
 }
 
 
-
  add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
  function enqueue_load_fa() {
  wp_enqueue_style( 'load-fa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
  }
 
- /*
+/*
+function extraire_evenement( $query ) {
+ 
+   if (!is_home() && $query->is_category('evenement'))
+   {
+      $query->set( 'posts_per_page', -1 );
+      $query->set( 'orderby', 'date' );
+      $query->set( 'order', 'asc' );
+   }
+}
+add_action( 'pre_get_posts', 'extraire_evenement' );
+
+*/
+
 function extraire_nouvelle( $query ) {
 
    if ($query->is_category('nouvelle'))
    {
-      $query->set("posts_per_page" => 3);
+      $query->set("posts_per_page" , 3);
    }
 }
 add_action( 'pre_get_posts', 'extraire_nouvelle' ); 
-*/

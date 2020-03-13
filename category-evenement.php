@@ -58,25 +58,6 @@ get_header();
             wp_reset_postdata();
 
 
-
-            echo '<div class="un-evenement">';
-
-
-            while ( $query2->have_posts() ) {
-                
-                $query2->the_post();
-
-                echo '<h1>' . get_the_title() .'______'. get_the_date() .'</h1>';
-                echo '<h3>' . get_the_author() . '</h3>';
-                echo '<p>' . get_the_excerpt() . '</p>';
-            }
-
-            echo '</div>';
-
-            wp_reset_postdata();
-
-
-
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
