@@ -43,6 +43,21 @@ $query1 = new WP_Query( $args );
 
 get_header();
 ?>
+        <nav class="menu">
+          <input id="checkMenu" type="checkbox">
+          <label id="btnMenu" for="checkMenu">&#9776;</label>
+          <ul class="listeMenu">
+            <li class="choixMenu"><a href="index.html">Page Principale</a></li>
+            <li class="choixMenu"><a >Événements</a></li>
+            <li class="choixMenu"><a>À propos</a></li>
+            <li class="choixMenu"><a>Contacter</a></li>
+            <li class="choixMenu"><a>Dates</a></li>
+            <li class="choixMenu"><a>Disponibilités</a></li>
+            <li class="choixMenu"><a>À propos</a></li>
+            <li class="choixMenu"><a>Produits</a></li>
+            <li class="choixMenu"><a>Contacter</a></li>
+          </ul>
+        </nav>   
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -52,7 +67,8 @@ get_header();
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h1 class="page-title screen-reader-text">
+          <?php single_post_title(); ?></h1>
 				</header>
 				<?php
 			endif;
@@ -78,6 +94,8 @@ echo '<h2>' . category_description( get_category_by_slug( 'nouvelle' )). '</h2>'
       echo "<div class='nouvelle'>";
       the_post_thumbnail('thumbnail');
       echo '<h2>' . get_the_title(). '</h2>';
+      echo '<button type=button> Voir plus </button>';
+      echo '<div id="nouvelleBtn"></div>';
       echo "</div>";
   }
 
