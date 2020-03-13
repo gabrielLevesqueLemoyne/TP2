@@ -19,3 +19,20 @@
     50%{background-position:88% 100%}
     100%{background-position:13% 0%}
 }
+
+h1, h2{
+    background: linear-gradient(to right, #fd1d1d 20%, #fcb045 40%, #fcb045 60%, #fd1d1d 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    //text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 1s linear infinite;  
+}
+    
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }

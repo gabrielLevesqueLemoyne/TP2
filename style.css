@@ -215,4 +215,28 @@ button {
     background-position: 13% 0%;
   }
 }
+
+h1, h2 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #fd1d1d), color-stop(40%, #fcb045), color-stop(60%, #fcb045), color-stop(80%, #fd1d1d));
+  background: linear-gradient(to right, #fd1d1d 20%, #fcb045 40%, #fcb045 60%, #fd1d1d 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 1s linear infinite;
+          animation: shine 1s linear infinite;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
 /*# sourceMappingURL=style.css.map */
