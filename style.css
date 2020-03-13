@@ -21,33 +21,153 @@
   color: blue;
 }
 
+.grid-evenement {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+  outline: 5px solid gray;
+  grid-auto-flow: dense;
+}
+
+.element-grid {
+  background-color: silver;
+  outline: 5px solid gray;
+}
+
+[id="06"] {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+[id="07"] {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+[id="08"] {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 3;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-#site-navigation button {
+.menu {
+  width: 100%;
+  height: 0px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.listeMenu {
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  list-style-type: none;
+  font-size: calc(2em + 1vw);
+  font-family: 'Playfair Display', serif;
+  padding: 5%;
+  background-color: peachpuff;
+  text-decoration: none;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.choixMenu {
+  margin: 100px;
+  opacity: 0;
+}
+
+#checkMenu:checked ~ #btnMenu {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition-property: ease-in-out transform;
+  transition-property: ease-in-out transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#checkMenu:checked ~ #btnMenu {
+  height: 100%;
+  -webkit-transition-property: ease-in-out transform;
+  transition-property: ease-in-out transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#btnMenu {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition-property: ease-in-out transform;
+  transition-property: ease-in-out transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#checkMenu:checked ~ ul {
+  opacity: 1;
+  -webkit-transition-property: ease-in-out transform;
+  transition-property: ease-in-out transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#checkMenu:checked ~ ul > li {
+  opacity: 1;
+}
+
+#checkMenu {
   display: none;
 }
 
-#primary-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+@media screen and (min-width: 500px) {
+  .listeMenu {
+    font-size: calc(1.5em + 1vw);
+  }
+  .choixMenu {
+    text-align: center;
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
+  .choixMenu:hover {
+    color: palevioletred;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
 }
 
-ul {
-  list-style-type: none;
-}
-
-li {
-  margin: 10px;
-}
-
-a {
-  text-decoration: none;
+button {
+  background-color: purple;
+  color: aqua;
 }
 
 .evenement {
@@ -63,5 +183,60 @@ a {
 .evenement > img {
   float: left;
   margin: 10px;
+}
+
+.site {
+  background: linear-gradient(279deg, #9ab0e8, #6dd493);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 13% 0%;
+  }
+  50% {
+    background-position: 88% 100%;
+  }
+  100% {
+    background-position: 13% 0%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 13% 0%;
+  }
+  50% {
+    background-position: 88% 100%;
+  }
+  100% {
+    background-position: 13% 0%;
+  }
+}
+
+h1, h2 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #fd1d1d), color-stop(40%, #fcb045), color-stop(60%, #fcb045), color-stop(80%, #fd1d1d));
+  background: linear-gradient(to right, #fd1d1d 20%, #fcb045 40%, #fcb045 60%, #fd1d1d 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 1s linear infinite;
+          animation: shine 1s linear infinite;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
