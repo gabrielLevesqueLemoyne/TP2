@@ -10,7 +10,7 @@ function my_theme_enqueue_styles() {
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style ),
         wp_get_theme()->get('Version'));
-        wp_enqueue_script( 'main_js', get_stylesheet_directory_uri() . 'js/main.js'); 
+        wp_enqueue_script( 'main_js', get_stylesheet_directory_uri() . '/js/main.js'); 
 }
 
 

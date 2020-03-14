@@ -91,10 +91,10 @@ echo '<h2>' . category_description( get_category_by_slug( 'nouvelle' )). '</h2>'
   // The 2nd Loop
   while ( $query2->have_posts() ) {
       $query2->the_post();
-      echo "<div class='nouvelle'>";
       the_post_thumbnail('thumbnail');
       echo '<h2>' . get_the_title(). '</h2>';
-      echo '<button type=button> Voir plus </button>';
+      echo '<div class="contentNouvelle"  id="event-'.get_the_ID().'">';
+      echo '<button class="btnNouvelle" type=button id="'.get_the_ID().'"> Voir plus </button>';
       echo '<div id="nouvelleBtn"></div>';
       echo "</div>";
   }
