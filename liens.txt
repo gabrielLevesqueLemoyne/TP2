@@ -1,0 +1,8 @@
+https://e1736918.webdev.cmaisonneuve.qc.ca/tp2_veille/
+
+https://github.com/gabrielLevesqueLemoyne/TP2
+
+username : admin
+password : quann
+
+Travail réaliser en équipe (Maude Martel et Gabriel Lévesque-Lemoyne).
