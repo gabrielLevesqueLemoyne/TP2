@@ -40,24 +40,28 @@ $query1 = new WP_Query( $args );
 
   $query3 = new WP_Query( $args3 );
 
-
 get_header();
 ?>
-        <nav class="menu">
-          <input id="checkMenu" type="checkbox">
-          <label id="btnMenu" for="checkMenu">&#9776;</label>
-          <ul class="listeMenu">
-            <li class="choixMenu"><a href="index.html">Page Principale</a></li>
-            <li class="choixMenu"><a >Événements</a></li>
-            <li class="choixMenu"><a>À propos</a></li>
-            <li class="choixMenu"><a>Contacter</a></li>
-            <li class="choixMenu"><a>Dates</a></li>
-            <li class="choixMenu"><a>Disponibilités</a></li>
-            <li class="choixMenu"><a>À propos</a></li>
-            <li class="choixMenu"><a>Produits</a></li>
-            <li class="choixMenu"><a>Contacter</a></li>
-          </ul>
-        </nav>   
+       
+        <section class="menuBarre">
+          <nav class="menu">
+              <input id="checkMenu" type="checkbox">
+              <label id="btnMenu" for="checkMenu">&#9776;</label>
+            <ul class="listeMenu">
+                <li class="choixMenu"><a>Accueil</a></li>
+                <li class="choixMenu"><a>Événements</a></li>
+                <li class="choixMenu"><a class="aPropos">À propos</a></li>
+                <li class="choixMenu"><a>Contacter</a></li>
+                <li class="choixMenu"><a>En savoir plus</a></li>
+                <li class="choixMenu"><a>Blogs</a></li>
+                <li class="choixMenu"><a>Services</a></li>
+                <li class="choixMenu"><a>Accueil</a></li>
+                <li class="choixMenu"><a>Produits</a></li>
+                <li class="choixMenu"><a>Contacter</a></li>
+            </ul>
+          </nav>
+        </section>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
